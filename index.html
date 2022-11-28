@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
+
+        header {
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            height: 60vh;
+            border-bottom: 10px solid gray;
+        }
+
+        .formTask {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper__info {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        label {
+            margin-right: 50px;
+            font-size: 25px;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            border-bottom: 2px solid;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        select {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        textarea {
+            font-size: 15px;
+            padding: 10px;
+            margin-bottom: 50px;
+        }
+
+        .btn_save {
+            width: 50%;
+            height: 40px;
+            font-size: 15px;
+        }
+
+        ol {
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        li {
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 2px black solid;
+            margin-bottom: 25px;
+            padding: 20px;
+            /* transition: 0.5s; */
+            cursor: pointer;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .wrapper__modal {
+            box-shadow: 19px 16px 16px 15px rgba(34, 60, 80, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.663);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container__modal {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .wrapper__input {
+            min-height: 150px;
+        }
+
+        .wrapper__input div {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper__input div input {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper__modal none">
+        <div class="container__modal">
+            <h1>Task editing</h1>
+            <form>
+                <div class="wrapper__input">
+                    <div>
+                        <label>Edit name task</label>
+                        <input class="edit-name" type="text" />
+                    </div>
+                    <div>
+                        <label>edit dedline</label>
+                        <input class="edit-date" type="date" />
+                    </div>
+                </div>
+                <div>
+                    <textarea class="edit_decr" name="" id="" cols="50" rows="10"></textarea>
+                </div>
+                <button class="btnEdit">Edit task</button>
+                <button class="btn-close">Close</button>
+            </form>
+        </div>
+    </div>
+    <h1>To do list</h1>
+    <header>
+        <form class="formTask">
+            <div class="wrapper__info">
+                <div>
+                    <label>Name tasks</label>
+                    <input class="name" value="Fix bag #569" type="text" />
+                </div>
+                <div>
+                    <label>Dedline tasks</label>
+                    <input class="date" type="date" />
+                </div>
+                <div>
+                    <label>Type task</label>
+                    <select>
+                        <option hidden>Select tasks</option>
+                        <option value="important task">important task</optio
